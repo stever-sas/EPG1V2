@@ -1,8 +1,12 @@
 /*************************************************************
- Note: This program will not run properly on z/OS.
-       Only Windows, Linux and UNIX are supported.
-       Values for PATH are CASE SENSITIVE.
+ Note: If you created the EPG1V2 folder in MYFOLDER in 
+       Workbench for Learners, you do not need to modify
+       the program.
+       If EPG1V2 is in a different location, right-click 
+       EPG1V2 in the Explorer and click Copy Path. Then
+       replace the path in the %LET statement below. 
 *************************************************************/
+
 %let path=/workspaces/myfolder/EPG1V2;
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
