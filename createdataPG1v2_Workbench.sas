@@ -3,16 +3,13 @@
        Only Windows, Linux and UNIX are supported.
        Values for PATH are CASE SENSITIVE.
 *************************************************************/
-%let path=EPG1V2;
+%let path=/workspaces/myfolder/EPG1V2;
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  WARNING: DO NOT ALTER CODE BELOW THIS LINE IN ANY WAY
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/* Make sure path consistently uses forward slashes */
 %let course=epg1v2;
-%let path=%qsysfunc(translate(%superq(path),/,\));
-%let original_path=%superq(path);
 
 /*options nomprint nosymbolgen nonotes nosource dlcreatedir;*/
 options mprint symbolgen notes source;
@@ -145,7 +142,6 @@ filename unzip;
 %unpack(%superq(path),epg1v2.zip,epg1v2)
 
 /* Run customized setup.sas for Workbench */
-%let path=EPG1V2/data;
 libname PG1 "&path";
 
 %include "&path/pg1v2.sas";
